@@ -8,42 +8,49 @@
     <title>Orinoco</title>
 </head>
 <body>
-    <div class=""></div>
-            <h2>Nos Meubles</h2>
-            <div id="meubles">
-                <img src="" alt="">
-            </div>
-            </body>
-                <script>
-                    let div = document.getElementById("meubles")
-                    div.innerHTML = 'toto'
-                    fetch("http://localhost:3000/api/furniture")
-                    .then(Response=>Response.json())
-                    .then(Fourniture=>{
-                        /** 
-                        [{"varnish":["Tan","Chocolate",
-                        "Black","White"],
-                        "_id":"5be9cc611c9d440000c1421e",
-                        "name":"Cross Table",
-                        "price":59900,"description":"a",
-                        "imageUrl":"http://localhost:3000/images/oak_1.jpg"}]   
-                        **/
-                    for ( let product of Fourniture){
-                        let content = '<div><h3>' + product.name + '</h3><p>Prix:' + product.price + '</p><p> <img width="300px"  src="' + product.imageUrl + '"></img></p></div>' 
-                        div.innerHTML += content
-                    }
-                    })
-                </script>
+    <header>
+        <div class="logo">
+            <img src="image/logo2.png" alt="Logo">
+        </div>
+    </header>
     <div id="box-size">
-        <header>
-
-        </header>
+        <div class=""></div>
+                <h2>Nos Meubles</h2>
+                <div id="meubles">
+                    <img src="" alt="">
+                </div>
+                    <script>
+                        let div = document.getElementById("meubles")
+                        div.innerHTML = 'toto'
+                        fetch("http://localhost:3000/api/furniture")
+                        .then(Response=>Response.json())
+                        .then(Fourniture=>{
+                            /** 
+                            [{"varnish":["Tan","Chocolate",
+                            "Black","White"],
+                            "_id":"5be9cc611c9d440000c1421e",
+                            "name":"Cross Table",
+                            "price":59900,"description":"a",
+                            "imageUrl":"http://localhost:3000/images/oak_1.jpg"}]   
+                            **/
+                        for ( let product of Fourniture){
+                            let content = '<div><h3>' + product.name + '</h3><p>Prix:' + product.price + '</p><p> <img width="300px"  src="' + product.imageUrl + '"></img></p></div>' 
+                            div.innerHTML += content
+                        }
+                        })
+                    </script>
         <section>
-
+            <div class="oak"></div>
+            <div class="teddy"></div>
+            <div class="cam"></div>
         </section>
         <aside>
-
+            <div class="cart">
+            </div>
         </aside>
-        
+        <footer>
+            <div class="contact"></div> 
+        </footer>
     </div>
+</body>
 </html>
