@@ -14,14 +14,12 @@
         </div>
     </header>
     <div id="box-size">
-        <div class=""></div>
+        <div class="">
                 <h2>Nos Meubles</h2>
                 <div id="meubles">
-                    <img src="" alt="">
                 </div>
                     <script>
                         let div = document.getElementById("meubles")
-                        div.innerHTML = 'toto'
                         fetch("http://localhost:3000/api/furniture")
                         .then(Response=>Response.json())
                         .then(Fourniture=>{
@@ -30,15 +28,16 @@
                             "Black","White"],
                             "_id":"5be9cc611c9d440000c1421e",
                             "name":"Cross Table",
-                            "price":59900,"description":"a",
+                            "price":59900,
+                            "description":"a",
                             "imageUrl":"http://localhost:3000/images/oak_1.jpg"}]   
                             **/
                         for ( let product of Fourniture){
-                            let content = '<div><h3>' + product.name + '</h3><p>Prix:' + product.price + '</p><p> <img width="300px"  src="' + product.imageUrl + '"></img></p></div>' 
+                            let content = '<div class="firstprod"><h3>' + product.name + '</h3><p>Prix:' + product.price + '€</p><div class="imageproduct"> <img width="300px"  src="' + product.imageUrl + '"></img></div></div>' 
                             div.innerHTML += content
                         }
                         })
-                    </script>
+                    </script>-+-
         <section>
             <div class="oak"></div>
             <div class="teddy"></div>

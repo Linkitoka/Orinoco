@@ -34,12 +34,27 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: "geo" ;
+    src: url("polices/GeosansLight.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "geoita" ;
+    src: url("polices/GeosansLight-Oblique.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 h2{
     font-family: 'daybury', sans-serif;
     font-size: 3.5rem;
 }
 h3{
-    font-family: 'incli', sans-serif;
+    font-family: 'geo', sans-serif;
     font-size: 2.5rem;
+}
+p{
+    font-family: 'roboto-thin', sans-serif ;
+    
 }
