@@ -14,13 +14,20 @@ function load_furnitures() {
         .then(Response => Response.json())
         .then(Furniture => {
             for (let element of Furniture) {
-                let content = create_div("Jolie", `${element.name} bonjour ${element.price}`, "red");
+                
+                let content = creatDiv("image_oak", `${element.imageUrl}`, "name_oak", `${element.name}`, "price",`${element.price}`)
                 div.innerHTML += content;
             }
         });
 }
 
-// Retourne une div avec ses classes son contenu et sa couleur à définir
-function create_div(classes , content, color) {
-    return `<div class="${classes}" style="color: ${color};">${content}</div>`;
+// Retourne une div avec ses classes son contenu
+function creatDiv(classesImg, urlImg,  classesName, contentName, classesPrice, contentPrice) {
+    return `<div class="furniture-oak">
+                <div class="${classesImg}"><img src="${urlImg}"></img></div>
+                    <div class="price-name">
+                        <div class="${classesName}">${contentName}</div>
+                            <div class="${classesPrice}">${contentPrice}€</div>
+                                </div></div>`;
 }
+

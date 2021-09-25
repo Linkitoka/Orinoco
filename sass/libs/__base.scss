@@ -5,6 +5,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: "roboto-medium-ita" ;
+    src: url("polices/Roboto-MediumItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: "roboto-thin" ;
     src: url("polices/Roboto-Thin.ttf") format("truetype");
     font-weight: normal;
@@ -46,15 +52,25 @@
     font-weight: normal;
     font-style: normal;
 }
+$color-primary : #ca873b ;
+$color-primary-opacity : rgb(202, 135, 59, 0.5);
+$color-secondary : #FF79DA;
+$color-secondary-opacity: rgb(255, 121, 218, 0.5);
+$color-tertiary : #9356DC;
+$color-tertiary-opacity: rgb(147, 86, 220, 0.5);
+$color-white : #FFF;
+
+$sizephone: 688px;
+$sizetablet: 1312px;
+
 h2{
     font-family: 'daybury', sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 h3{
     font-family: 'geo', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 p{
     font-family: 'roboto-thin', sans-serif ;
-    
 }
