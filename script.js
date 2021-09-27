@@ -15,7 +15,7 @@ function load_furnitures() {
         .then(Furniture => {
             for (let element of Furniture) {
                 
-                let content = creatDiv("furniture-oak", "image_oak", `${element.imageUrl}`, "name_oak", `${element.name}`, "price",`${element.price}`)
+                let content = creatDiv("furniture-oak", "image_oak", `${element.imageUrl}`, "name_oak", `${element.name}`, "price",`${element.price/100}`)
                 div.innerHTML += content;
             }
         });

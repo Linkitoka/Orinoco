@@ -66,6 +66,10 @@ $sizetablet: 1312px;
 h1, h2, h4{
     font-family: 'daybury', sans-serif;
     font-size: 2.5rem;
+        @media screen and (max-width: $sizephone){
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
 }
 h3{
     font-family: 'geo', sans-serif;
