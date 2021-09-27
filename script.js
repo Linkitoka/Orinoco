@@ -15,19 +15,19 @@ function load_furnitures() {
         .then(Furniture => {
             for (let element of Furniture) {
                 
-                let content = creatDiv("furniture-oak", "image_oak", `${element.imageUrl}`, "name_oak", `${element.name}`, "price",`${element.price/100}`)
+                let content = creatDiv(element)
                 div.innerHTML += content;
             }
         });
-}
+}   
 
 // Retourne une div avec ses classes son contenu
-function creatDiv(classOak, classesImg, urlImg,  classesName, contentName, classesPrice, contentPrice) {
-    return `<div class="${classOak}">
-                <div class="${classesImg}"><img src="${urlImg}"></img></div>
+function creatDiv(element) {
+    return `<a href="product.html?id=${element._id}"><div class="furniture-oak">
+                <div class="image_oak"><img src="${element.imageUrl}"></img></div>
                     <div class="price-name">
-                        <div class="${classesName}">${contentName}</div>
-                            <div class="${classesPrice}">${contentPrice}€</div>
-                                </div></div>`;
+                        <div class="name_oak">${element.name}</div>
+                            <div class="price">${element.price/100}€</div>
+                                </div></div></a>`;
 }
 
