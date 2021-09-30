@@ -202,6 +202,12 @@ h2, h4 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.price-name_product {
+  background: linear-gradient(0.25turn, rgba(202, 135, 59, 0.5), rgba(255, 121, 218, 0.5), rgba(147, 86, 220, 0.5));
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
 
 .name_oak {
   font-family: "roboto-medium-ita", sans-serif;

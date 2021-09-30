@@ -16,8 +16,9 @@ function load_furnitures() {
     fetch(`http://localhost:3000/api/furniture/${id}`)
         .then(Response => Response.json())
         .then(Furniture => {
-                let content = creatDiv(Furniture)
-                div.innerHTML += content;
+                let content = creatDiv(Furniture);
+                let contentVarnish = varnish(Furniture);
+                div.innerHTML += content + contentVarnish;
                
             }
         );
@@ -27,8 +28,18 @@ function load_furnitures() {
 function creatDiv(element) {
     return `<div class="furniture-oak">
                 <div class="image_oak"><img src="${element.imageUrl}"></img></div>
-                    <div class="price-name">
-                        <div class="name_oak">${element.name}</div>
-                            <div class="price">${element.price/100}€</div>
-                                </div></div></a>`;
+                    <div class="price-name_product">
+                        <div class="name_product">${element.name}</div>
+                            <div class="description">${element.description}</div>
+                            <div class="price_product">${element.price/100}€</div>
+                                </div></div>`;
+}
+function varnish() {
+    for (let varnishes of varnishes) {
+        return `<label for="varnish">Varnish</label>
+                    <select name="" id="meuble">
+                         <option value="">Please choose a varnish</option>
+                         <option value="${varnishes}">${varnishes}</option>
+                        `;
+    }
 }

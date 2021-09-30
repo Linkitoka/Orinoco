@@ -121,6 +121,12 @@ h2, h4{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+        &_product{
+            background: linear-gradient(0.25turn, $color-primary-opacity, $color-secondary-opacity, $color-tertiary-opacity);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
 }
 .name_oak{
     font-family: 'roboto-medium-ita', sans-serif;
